@@ -1,0 +1,14 @@
+# Name for the workflow
+name: First Workflow
+# When this workflow should be executes
+# This case workflow_dispatch is a event that waits for a manual trigger
+on: workflow_dispatch
+# The work that should be done
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello world of actions"
+      - name: Print goodbye
+        run: echo "Work done, goodbye!"
